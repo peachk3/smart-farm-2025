@@ -1,0 +1,275 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    color: #1e1e2f;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 900px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.current-time{
+    display: flex;
+    justify-content: right;
+    max-width: 900px;
+    width: 100%;
+    /* margin-top: 20px; */
+    margin-bottom: 20px; /* 가운데 정렬 및 아래 여백 */
+}
+#time-text{
+    padding-right: 90px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#current-time{
+    text-align: right;
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+h1 {
+    color: #1e1e2f;
+    text-align: center;
+}
+
+h2 {
+    color: #1e1e2f;
+    text-align: left;
+}
+
+h3 {
+    color: #1e1e2f;
+}
+
+#result{
+    padding: 5px 5px;
+    /* margin-top: 10px; */
+}
+
+.led-button{
+    background-color: #6c5ce7;
+    color: #fff;
+    padding: 12px 12px;
+    font-size: 14px;
+}
+
+button {
+    background-color: #6c5ce7;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+
+button:hover {
+    background-color: #574abe;
+}
+
+#mes_btn {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #6c5ce7;
+}
+
+.info-wrapper {
+    display: flex;
+    justify-content: center;
+    max-width: 900px;
+    width: 100%;
+    /* margin-top: 20px; */
+    margin: 0 auto 20px auto; /* 가운데 정렬 및 아래 여백 */
+}
+
+.bottom-wrapper {
+    display: flex;
+    justify-content: center;      /* 가운데 정렬 */
+    align-items: flex-start;
+    gap: 20px;                    /* 요소 간 간격 */
+    padding: 20px;
+    margin: 0 auto;
+    flex-wrap: wrap;              /* 화면 작아지면 자동 줄바꿈 */
+}
+
+/* 공통 카드 스타일 */
+.card-box {
+    background-color: #fff;
+    border: 4px solid #6c5ce7;
+    border-radius: 12px;
+    padding: 20px;
+    /* width: 200px; ✅ 모든 카드의 동일한 너비 지정 */
+    flex: 1 1 200px;              /* 동일한 크기 */
+    max-width: 200px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.info-card {
+    display: flex;
+    background: linear-gradient(135deg, #8e44ad, #6c5ce7);
+    border-radius: 20px;
+    padding: 30px;
+    color: #1e1e2f;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.info-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.user { 
+    padding-bottom: 10px;
+}
+
+.user h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.date h4 {
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.result-wrapper {
+    display: flex;
+    gap: 15px;
+    font-size: 26px;
+    align-items: center;
+    font-weight: bold;
+}
+
+.result-icon {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px 15px;
+    border-radius: 10px;
+    white-space: nowrap;
+}
+
+.info-right .user-image {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+}
+
+#current-time {
+    color: #1e1e2f;
+    font-size: 20px;
+    margin-right: 80px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#current-date {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #1e1e2f;
+    font-size: 30px;
+}
+.led-status{
+    color: #1e1e2f;
+}
+
+#led-status {
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+/* login.html */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1e1e2f;
+    color: #1e1e2f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.login-box {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    width: 320px;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #2d3436;
+}
+
+.login-box label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2d3436;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.login-box input[type="submit"] {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #6c5ce7;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    transition: background-color 0.3s;
+}
+
+.login-box input[type="submit"]:hover {
+    background-color: #5a4bcf;
+}
+
+.state-message {
+    margin-top: 15px;
+    text-align: center;
+    color: #d63031;
+    font-weight: bold;
+}

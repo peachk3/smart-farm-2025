@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Controller</title>
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/style.css')}}">
+</head>
+<body>
+    <div class="login-wrapper">
+        <div class="login-box">
+            <h3>관리자 로그인</h3>
+            <form action='/login' method='post'>
+                <label for="id">ID</label>
+                <input type='text' id="id" name="id" required>
+
+                <label for="pw">PW</label>
+                <input type="password" id="pw" name="pw" required>
+                <input type="submit" value="LOGIN">
+            </form>
+
+
+            <div class="state-message">{{state}}</div>
+        </div>
+    </div>
+</body>
+</html>

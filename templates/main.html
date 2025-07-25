@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Controller</title>
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/style.css')}}">
+</head>
+<body>
+    <div class="container">
+        <div class="title-container">
+            <h1>환경 감시 시스템</h1>
+            <!-- <div class="date-time"> -->
+            <div class="current-time">⏰<span id="time-text"></span></div>
+            <!-- </div>? -->
+        </div>
+        <!-- Flex로 정렬할 부모 -->
+        <div class="info-wrapper">
+            <div class="info-card">
+                <div class="info-left">
+                    <div class="user">
+                        <h2>Welcome<br> {{ user_nick }} !</h2>
+                        <br>
+                    </div>
+                    <span id="current-date"></span>
+                <!-- 온습도 정보 -->
+                    <!-- <h3>📊 최근 온습도 정보</h3> -->
+                    <!-- 📋 가장 최근 정보 -->
+                    <div id="measure-result">
+                        <div class="result-wrapper">
+                            <div class="result-box" id="result">🌡️ {{ temp|round|int }} ℃ </div>
+                            <div class="result-box" id="result">💧 {{ humid|round|int }} %</div>
+                            <div class="result-box" id="result"> {{ weather_info }}</div>
+                        </div>
+                        <!-- <button onclick="measure()"> 실시간 측정</button> -->
+                        <!-- <p id="mes_btn">※ 버튼을 눌러 실시간으로 측정해보세요!</p> -->
+                    </div>
+                </div>
+                <div class="info-right">
+                    <div style="width: 100px; height: 100px; background: white; border-radius: 50%; 
+                        display: flex; justify-content: center; align-items: center; font-size: 48px;">
+                        👨‍💻
+                    </div>
+                    <form action="/logout" method="get">
+                        <button id="logout" type="submit">LOGOUT</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- 💡 LED 카드 -->
+        <div class="bottom-wrapper">
+            <div class="led-container card-box">
+                <div class="led-bottom">
+                    <h3>LED</h3>
+                    <div class="led-status">
+                        💡 현재 상태: <span id="led-status">{{ 'ON' if led_state else 'OFF' }} </span>
+                        <button class="led-button" onclick="toggleLED()">{{ 'OFF' if led_state else 'ON' }}</button>
+                    </div>
+                    <!-- AJAX 방식으로 변경 -->
+                </div>
+            </div>
+            <div class="temp-container card-box">
+                <h3>Temperature</h3>
+                <h1>🌡️ {{ temp|round|int }} ℃</h1>
+            </div>
+            <div class="humid-container card-box">
+                <h3>Humidity</h3>
+                <h1>💧 {{ humid|round|int }} %</h1>
+            </div>
+        </div>
+    </div>
+    <!-- 기존 form 방식도 남겨둠 (백업용) -->
+    <!-- 
+    <form action="/ledControl" method="post">
+        <button type="submit">{{ 'OFF' if led_state else 'ON' }}</button>
+    </form>
+    -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
